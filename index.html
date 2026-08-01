@@ -4,193 +4,458 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmed Aadhil | Data Science Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Ahmed Aadhil - Data Science, MLOps & Machine Learning Portfolio. B.Sc. (Hons) Data Science student specializing in Drift Detection, Predictive Modeling, Computer Vision & Cloud Systems.">
+    <meta name="keywords" content="Ahmed Aadhil, Data Science, MLOps, Machine Learning, Data Engineering, Python, OpenCV, SQL, Streamlit, Docker, Sri Lanka">
+    <meta name="author" content="Ahmed Aadhil">
+    <title>Ahmed Aadhil | Data Science & MLOps Specialist</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- Interactive Data Constellation Canvas Background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navigation Bar -->
     <nav class="navbar">
-        <div class="logo">Aadhil.DS</div>
+        <a href="#home" class="logo">
+            <i class="fas fa-terminal"></i> Aadhil<span class="logo-accent">.DS</span>
+        </a>
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home" class="nav-link active"><i class="fas fa-house"></i> Home</a></li>
+            <li><a href="#about" class="nav-link"><i class="fas fa-user"></i> About</a></li>
+            <li><a href="#skills" class="nav-link"><i class="fas fa-code"></i> Skills</a></li>
+            <li><a href="#projects" class="nav-link"><i class="fas fa-diagram-project"></i> Projects</a></li>
+            <li><a href="#education" class="nav-link"><i class="fas fa-graduation-cap"></i> Education</a></li>
+            <li><a href="#reference" class="nav-link"><i class="fas fa-user-check"></i> Reference</a></li>
+            <li><a href="#contact" class="nav-link"><i class="fas fa-paper-plane"></i> Contact</a></li>
         </ul>
         <div id="clock" class="clock">00:00:00</div>
-        <div class="hamburger">
+        <div class="hamburger" id="hamburger">
             <i class="fas fa-bars"></i>
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <header id="home" class="hero">
-        <div class="hero-content">
+        <div class="hero-container">
             <div class="profile-img-container">
-                <img src="profile.png" alt="Ahmed Aadhil">
+                <img src="profile.png" alt="Ahmed Aadhil Profile Picture">
+                <span class="status-badge" title="Open for Internships"><i class="fas fa-circle"></i> Available for Internships</span>
             </div>
-            <h1>Hi, I'm <span class="highlight">Ahmed Aadhil</span></h1>
-            <p>I am a <span class="typing-text"></span></p>
-            <div class="social-icons">
-                <a href="https://github.com/AadhilAslam88" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/ahmed-aadhil" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=aslamaadhil99@gmail.com" target="_blank"><i
-                        class="fas fa-envelope"></i></a>
-                <a href="https://wa.me/94712833936" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            
+            <div class="hero-text">
+                <div class="greeting-tag"><i class="fas fa-wave-square"></i> Welcome to my Data Science Hub</div>
+                <h1>Hi, I'm <span class="highlight">Ahmed Aadhil</span></h1>
+                <p class="role-subtitle">
+                    I specialize in <span class="typing-text"></span><span class="typing-cursor">&nbsp;</span>
+                </p>
+
+                <!-- Location & Info Badges -->
+                <div class="badge-group">
+                    <span class="badge-item"><i class="fas fa-map-marker-alt"></i> Padukka, Colombo, Sri Lanka</span>
+                    <span class="badge-item"><i class="fas fa-university"></i> SLTC Data Science (GPA 3.09)</span>
+                    <span class="badge-item"><i class="fas fa-bullseye"></i> DS / ML / DE / Analytics</span>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary"><i class="fas fa-rocket"></i> Explore Projects</a>
+                    <a href="Ahmed Aadhil Resume.pdf" class="btn btn-outline" download><i class="fas fa-file-download"></i> Download CV</a>
+                    <a href="https://wa.me/94712833936?text=Hello%20Ahmed,%20I%20viewed%20your%20Data%20Science%20portfolio" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Quick Chat</a>
+                </div>
+
+                <!-- Social Icons -->
+                <div class="social-icons">
+                    <a href="https://github.com/AadhilAslam88" target="_blank" title="GitHub Profile"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/ahmed-aadhil" target="_blank" title="LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:aslamaadhil99@gmail.com" target="_blank" title="Send Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://wa.me/94712833936" target="_blank" title="WhatsApp Contact"><i class="fab fa-whatsapp"></i></a>
+                </div>
             </div>
-            <a href="#projects" class="btn">View My Work</a>
-            <a href="Ahmed Aadhil Resume.pdf" class="btn btn-outline" download>Download CV</a>
+        </div>
+
+        <!-- Quick Stats Counter Strip -->
+        <div class="stats-strip">
+            <div class="stat-card">
+                <div class="stat-number">6+</div>
+                <div class="stat-label">End-to-End Projects</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">3.09</div>
+                <div class="stat-label">B.Sc. GPA</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">10+</div>
+                <div class="stat-label">ML & Data Tools</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">10+</div>
+                <div class="stat-label">Certifications</div>
+            </div>
         </div>
     </header>
 
+    <!-- About Section -->
     <section id="about" class="section">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I am a motivated <strong>B.Sc. (Hons) Data Science</strong> student at SLTC Research University
-                        with a <strong>GPA of 3.49</strong>. I have hands-on experience in Python, SQL, computer vision,
-                        and cloud-based systems.</p>
-                    <br>
-                    <p>I specialize in building end-to-end projects, from statistical modeling to deploying analytical
-                        solutions. I am currently seeking opportunities in Data Science, Machine Learning, or Data
-                        Engineering to apply my skills in predictive analytics and visualization.</p>
+            <h2 class="section-title"><i class="fas fa-user-astronaut"></i> About Me</h2>
+            <div class="section-divider"></div>
+            
+            <div class="about-grid">
+                <div class="about-bio">
+                    <p class="bio-lead">
+                        I am a motivated <strong>B.Sc. (Hons) Data Science</strong> student (GPA 3.09) at SLTC Research University with practical hands-on experience in <strong>Python, SQL, Machine Learning, Computer Vision, MLOps, and Cloud-based systems</strong>.
+                    </p>
+                    <p>
+                        My core strengths lie in designing and executing end-to-end analytical solutions — ranging from static statistical modeling to real-time production model monitoring (Data, Concept & Prediction Drift), REST API serving, and interactive dashboard creation.
+                    </p>
+                    <p>
+                        I have developed full-stack systems using tools like <strong>OpenCV, NumPy, scikit-learn, XGBoost, MySQL, Docker, Streamlit, Power BI, Firebase, and AWS</strong>. I am actively seeking a Data Science / Machine Learning / Data Engineering / Data Analytics internship to apply my predictive analytics, data pipeline, and visualization skills to real-world business challenges.
+                    </p>
+                </div>
+
+                <div class="focus-cards-grid">
+                    <div class="focus-card">
+                        <div class="focus-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3>MLOps & Drift Detection</h3>
+                        <p>Monitoring Data, Concept, and Prediction Drift in production ML models with automated alerting.</p>
+                    </div>
+                    <div class="focus-card">
+                        <div class="focus-icon"><i class="fas fa-brain"></i></div>
+                        <h3>Predictive ML & APIs</h3>
+                        <p>Building ML pipelines, feature engineering, XGBoost modeling, and REST API model deployment.</p>
+                    </div>
+                    <div class="focus-card">
+                        <div class="focus-icon"><i class="fas fa-eye"></i></div>
+                        <h3>Computer Vision Systems</h3>
+                        <p>Automated red-light violation detection and face recognition using Python, OpenCV, and MySQL.</p>
+                    </div>
+                    <div class="focus-card">
+                        <div class="focus-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                        <h3>Cloud & BI Analytics</h3>
+                        <p>Developing cloud entry/exit systems (Firebase/AWS) and interactive Power BI executive dashboards.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="education" class="section bg-dark">
+    <!-- Technical Skills Section -->
+    <section id="skills" class="section bg-glass">
         <div class="container">
-            <h2 class="section-title">Education & Certs</h2>
+            <h2 class="section-title"><i class="fas fa-laptop-code"></i> Technical Skills & Expertise</h2>
+            <div class="section-divider"></div>
+            <p class="section-description">A complete breakdown of my technical stack, data engineering concepts, MLOps tools, and analytical methods.</p>
 
-            <div class="education-grid">
-                <div class="edu-card">
-                    <i class="fas fa-graduation-cap"></i>
-                    <h3>B.Sc. (Hons) in Data Science</h3>
-                    <p class="institution">SLTC Research University (2027)</p>
-                    <p class="details">GPA: 3.49 | Key Coursework: ML, NLP, Data Warehousing, Cloud Computing.</p>
+            <div class="skills-categories-grid">
+                <!-- 1. Languages -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Programming Languages</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag primary"><i class="fab fa-python"></i> Python</span>
+                        <span class="skill-tag primary"><i class="fas fa-database"></i> SQL</span>
+                        <span class="skill-tag"><i class="fab fa-r-project"></i> R</span>
+                        <span class="skill-tag"><i class="fab fa-java"></i> Java</span>
+                        <span class="skill-tag"><i class="fas fa-c"></i> C</span>
+                    </div>
                 </div>
-                <div class="edu-card">
-                    <i class="fas fa-school"></i>
-                    <h3>Physical Science Stream</h3>
-                    <p class="institution">Put/President Science College</p>
-                    <p class="details">G.C.E. Advanced Level - 2021 Batch</p>
+
+                <!-- 2. Data Science & ML -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <i class="fas fa-microchip"></i>
+                        <h3>Data Science & ML</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag primary">NumPy</span>
+                        <span class="skill-tag primary">pandas</span>
+                        <span class="skill-tag primary">scikit-learn</span>
+                        <span class="skill-tag primary">XGBoost / LightGBM</span>
+                        <span class="skill-tag">Classification</span>
+                        <span class="skill-tag">Regression</span>
+                        <span class="skill-tag">Clustering</span>
+                        <span class="skill-tag">Feature Engineering</span>
+                        <span class="skill-tag">Hyperparameter Tuning</span>
+                        <span class="skill-tag">Statistics & Probability</span>
+                        <span class="skill-tag">Time-Series Analysis</span>
+                    </div>
                 </div>
-            </div>
-            <br>
-            <h3 class="subsection-title">Certifications & Achievements</h3>
-            <div class="cert-grid">
-                <div class="cert-item">Artificial Intelligence Fundamentals - Mind Luster (2025)</div>
-                <div class="cert-item">R Programming Bootcamp - Udemy (2025)</div>
-                <div class="cert-item">Complete Guide in HTML & CSS - Udemy (2025)</div>
-                <div class="cert-item">Codemania v5.0 Coding Competition - IEEE (2025) </div>
-                <div class="cert-item">Numpy For Data Science - Udemy (2024) </div>
-                <div class="cert-item">Python Programming Bootcamp - Udemy (2024)</div>
-                <div class="cert-item">SQL Mastery - Udemy (2024)</div>
-                <div class="cert-item">Complete C Programming Course - Udemy (2024)</div>
-                <div class="cert-item">Java Fundamentals for Beginners - Udemy (2024)</div>
-                <div class="cert-item">Mastering Version Control (Git/GitHub) - Microsoft (2024)</div>
+
+                <!-- 3. MLOps & Model Deployment -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <i class="fas fa-cogs"></i>
+                        <h3>MLOps & Model Deployment</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag primary">Model Monitoring</span>
+                        <span class="skill-tag primary">Data / Concept / Prediction Drift</span>
+                        <span class="skill-tag primary">REST APIs (Flask/FastAPI)</span>
+                        <span class="skill-tag primary"><i class="fab fa-docker"></i> Docker Containerization</span>
+                        <span class="skill-tag">CI/CD Basics</span>
+                        <span class="skill-tag">Git / DVC Concepts</span>
+                        <span class="skill-tag">Experiment Tracking</span>
+                    </div>
+                </div>
+
+                <!-- 4. Data Engineering -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <i class="fas fa-network-wired"></i>
+                        <h3>Data Engineering</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag primary">ETL / ELT Pipelines</span>
+                        <span class="skill-tag primary">Data Warehousing (Star/Snowflake)</span>
+                        <span class="skill-tag">Big Data (Hadoop / Spark)</span>
+                        <span class="skill-tag">Airflow Concepts</span>
+                        <span class="skill-tag">Data Cleaning & Validation</span>
+                    </div>
+                </div>
+
+                <!-- 5. Data Analysis & BI -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <i class="fas fa-chart-pie"></i>
+                        <h3>Data Analysis & BI</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag primary"><i class="fas fa-chart-bar"></i> Power BI</span>
+                        <span class="skill-tag primary"><i class="fas fa-file-excel"></i> Excel</span>
+                        <span class="skill-tag">KPI Design</span>
+                        <span class="skill-tag">Dashboarding</span>
+                        <span class="skill-tag">Business Reporting</span>
+                        <span class="skill-tag">Data Storytelling</span>
+                        <span class="skill-tag">EDA</span>
+                        <span class="skill-tag">A/B Testing Fundamentals</span>
+                    </div>
+                </div>
+
+                <!-- 6. Computer Vision & NLP -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <i class="fas fa-eye"></i>
+                        <h3>NLP & Computer Vision</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag primary">OpenCV</span>
+                        <span class="skill-tag primary">OCR (EasyOCR, Pytesseract)</span>
+                        <span class="skill-tag">NLTK</span>
+                        <span class="skill-tag">Text Mining</span>
+                        <span class="skill-tag">Tokenization</span>
+                        <span class="skill-tag">Sentiment Analysis</span>
+                    </div>
+                </div>
+
+                <!-- 7. Databases & Cloud -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <i class="fas fa-cloud"></i>
+                        <h3>Databases & Cloud</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag primary"><i class="fas fa-database"></i> MySQL</span>
+                        <span class="skill-tag primary">Relational Modeling</span>
+                        <span class="skill-tag">SQL Joins & Window Functions</span>
+                        <span class="skill-tag primary"><i class="fab fa-aws"></i> AWS</span>
+                        <span class="skill-tag primary"><i class="fas fa-fire"></i> Firebase</span>
+                        <span class="skill-tag">Cloud Security & Privacy</span>
+                        <span class="skill-tag">Data Governance</span>
+                    </div>
+                </div>
+
+                <!-- 8. Soft Skills & Tools -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Tools & Soft Skills</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag primary"><i class="fab fa-git-alt"></i> Git / GitHub</span>
+                        <span class="skill-tag primary">Jupyter Notebook</span>
+                        <span class="skill-tag">Streamlit</span>
+                        <span class="skill-tag">Problem-Solving</span>
+                        <span class="skill-tag">Teamwork & Leadership</span>
+                        <span class="skill-tag">Time Management</span>
+                        <span class="skill-tag">Fluent English</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="section">
+    <!-- Projects Section -->
+    <section id="projects" class="section">
         <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <i class="fab fa-python"></i>
-                    <h3>Languages</h3>
-                    <p>Python, SQL, R, Java, C</p>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-brain"></i>
-                    <h3>Data Science & ML</h3>
-                    <p>Pandas, Scikit-Learn, OpenCV, NumPy, NLP</p>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-cloud"></i>
-                    <h3>Cloud & Tools</h3>
-                    <p>AWS, Firebase, Git/GitHub, Power BI, VS Code </p>
-                </div>
-            </div>
-        </div>
-    </section>
+            <h2 class="section-title"><i class="fas fa-folder-open"></i> Featured Projects</h2>
+            <div class="section-divider"></div>
+            <p class="section-description">A showcase of production-ready machine learning pipelines, MLOps drift systems, computer vision applications, and BI platforms.</p>
 
-    <section id="projects" class="section bg-dark">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <!-- Project Category Filter Buttons -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="mlops">MLOps & ML</button>
+                <button class="filter-btn" data-filter="vision">Computer Vision</button>
+                <button class="filter-btn" data-filter="cloud">Cloud & Web</button>
+                <button class="filter-btn" data-filter="bi">Data Engineering & BI</button>
+            </div>
+
+            <!-- Projects Grid -->
             <div class="projects-grid">
 
-                <div class="project-card">
-                    <div class="project-info">
-                        <h3>Traffic Violation Detection</h3>
-                        <p class="date">July 2025 - Oct 2025</p>
-                        <p>Real-time face recognition system using Computer Vision to detect red-light violations.
-                            Integrated with MySQL for log management.</p>
+                <!-- Project 1: MLOps Drift Detection -->
+                <div class="project-card" data-category="mlops">
+                    <div class="project-header">
+                        <span class="project-badge current">Aug 2026 – Present</span>
+                        <span class="category-tag"><i class="fas fa-server"></i> MLOps</span>
+                    </div>
+                    <div class="project-body">
+                        <h3>Real-Time MLOps Drift Detection & Monitoring System</h3>
+                        <p class="project-short">An end-to-end production model-monitoring system built to detect Data Drift, Concept Drift, and Prediction Drift in post-deployment ML models.</p>
+                        
+                        <div class="tags">
+                            <span>MLOps</span>
+                            <span>Drift Detection</span>
+                            <span>Python</span>
+                            <span>scikit-learn</span>
+                            <span>Alerting</span>
+                            <span>Dashboard</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <button class="btn-detail" onclick="openProjectModal('mlops')"><i class="fas fa-info-circle"></i> View Full Architecture</button>
+                    </div>
+                </div>
+
+                <!-- Project 2: Customer Churn Prediction -->
+                <div class="project-card" data-category="mlops">
+                    <div class="project-header">
+                        <span class="project-badge">Jul 2026 – Jul 2026</span>
+                        <span class="category-tag"><i class="fas fa-brain"></i> Machine Learning</span>
+                    </div>
+                    <div class="project-body">
+                        <h3>Customer Churn Prediction Platform</h3>
+                        <p class="project-short">End-to-end ML pipeline that ingests CRM data, evaluates XGBoost models, serves predictions via REST API, and features a Streamlit dashboard containerized with Docker.</p>
+                        
+                        <div class="tags">
+                            <span>XGBoost</span>
+                            <span>Docker</span>
+                            <span>REST API</span>
+                            <span>Streamlit</span>
+                            <span>CRM Data</span>
+                            <span>Pipeline</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <button class="btn-detail" onclick="openProjectModal('churn')"><i class="fas fa-info-circle"></i> View Details</button>
+                    </div>
+                </div>
+
+                <!-- Project 3: Traffic Violation Detection -->
+                <div class="project-card" data-category="vision">
+                    <div class="project-header">
+                        <span class="project-badge">Jul 2025 – Oct 2025</span>
+                        <span class="category-tag"><i class="fas fa-eye"></i> Computer Vision</span>
+                    </div>
+                    <div class="project-body">
+                        <h3>Traffic Red-Light Violation Detection System</h3>
+                        <p class="project-short">Automated computer vision system utilizing Python and OpenCV to detect red-light running vehicles from video feeds and capture violation frames into MySQL.</p>
+                        
                         <div class="tags">
                             <span>Python</span>
                             <span>OpenCV</span>
                             <span>MySQL</span>
+                            <span>Image Processing</span>
+                            <span>Vehicle Tracking</span>
                         </div>
-                        <div class="project-links">
-                            <a href="https://github.com/AadhilAslam88/Traffic-Red-Light-Running-Violation-Detection.git"
-                                target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <button class="btn-detail" onclick="openProjectModal('traffic')"><i class="fas fa-info-circle"></i> Details</button>
+                        <a href="https://github.com/AadhilAslam88/Traffic_Red-Light-Running_Violation_Detection" target="_blank" class="btn-link"><i class="fab fa-github"></i> GitHub</a>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-info">
-                        <h3>Hostel Management System</h3>
-                        <p class="date">Feb 2025 - May 2025</p>
-                        <p>Cloud-based entry/exit system using QR codes and university IDs. utilized Firebase/AWS for
-                            real-time dashboard analytics.</p>
+                <!-- Project 4: Hostel Entry/Exit Management -->
+                <div class="project-card" data-category="cloud">
+                    <div class="project-header">
+                        <span class="project-badge">Feb 2025 – May 2025</span>
+                        <span class="category-tag"><i class="fas fa-cloud"></i> Cloud & Web</span>
+                    </div>
+                    <div class="project-body">
+                        <h3>Cloud Hostel Entry–Exit Management System</h3>
+                        <p class="project-short">Cloud-based QR-code check-in/out system using university IDs for real-time monitoring, Firebase/AWS data storage, and automated admin security notifications.</p>
+                        
                         <div class="tags">
-                            <span>Cloud (AWS/Firebase)</span>
-                            <span>Web</span>
-                            <span>QR Tech</span>
+                            <span>AWS / Firebase</span>
+                            <span>QR Code</span>
+                            <span>Real-Time Analytics</span>
+                            <span>Security Alerts</span>
                         </div>
-                        <div class="project-links">
-                            <a href="https://sltc-unigo.netlify.app/" target="_blank"><i
-                                    class="fas fa-external-link-alt"></i> Live Demo</a>
-                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <button class="btn-detail" onclick="openProjectModal('hostel')"><i class="fas fa-info-circle"></i> Details</button>
+                        <a href="https://sltc-unigo.netlify.app/" target="_blank" class="btn-link btn-live"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-info">
+                <!-- Project 5: Retail Analytics Dashboard -->
+                <div class="project-card" data-category="bi">
+                    <div class="project-header">
+                        <span class="project-badge">Aug 2025 – Sep 2025</span>
+                        <span class="category-tag"><i class="fas fa-chart-bar"></i> BI & Data Eng</span>
+                    </div>
+                    <div class="project-body">
                         <h3>Retail Analytics Dashboard</h3>
-                        <p class="date">Aug 2025 - Sept 2025</p>
-                        <p>Power BI dashboard using transactional data to analyze sales trends, top products, and
-                            revenue by category.</p>
+                        <p class="project-short">Interactive Power BI dashboard backed by SQL data wrangling and aggregation to analyze retail transactional trends, category revenues, and regional performance.</p>
+                        
                         <div class="tags">
                             <span>Power BI</span>
-                            <span>SQL</span>
-                            <span>Data Wrangling</span>
+                            <span>SQL Queries</span>
+                            <span>Data Cleaning</span>
+                            <span>KPI Design</span>
+                            <span>Sales Trends</span>
                         </div>
+                    </div>
+                    <div class="project-footer">
+                        <button class="btn-detail" onclick="openProjectModal('retail')"><i class="fas fa-info-circle"></i> View Details</button>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-info">
+                <!-- Project 6: Face Recognition System -->
+                <div class="project-card" data-category="vision">
+                    <div class="project-header">
+                        <span class="project-badge">May 2024 – Jun 2024</span>
+                        <span class="category-tag"><i class="fas fa-user-lock"></i> Computer Vision</span>
+                    </div>
+                    <div class="project-body">
                         <h3>Face Recognition System</h3>
-                        <p class="date">May 2024 - June 2024</p>
-                        <p>Real-time face detection app using Python & OpenCV. Logs user recognition status to a MySQL
-                            database.</p>
+                        <p class="project-short">Real-time face detection and identification application combining Python, OpenCV, and online MySQL database profile & access log management.</p>
+                        
                         <div class="tags">
                             <span>Python</span>
                             <span>OpenCV</span>
                             <span>MySQL</span>
+                            <span>Real-Time Logs</span>
+                            <span>Full-Stack</span>
                         </div>
-                        <div class="project-links">
-                            <a href="https://github.com/AadhilAslam88/facerecognition" target="_blank"><i
-                                    class="fab fa-github"></i> GitHub</a>
-                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <button class="btn-detail" onclick="openProjectModal('facerecog')"><i class="fas fa-info-circle"></i> Details</button>
+                        <a href="https://github.com/AadhilAslam88/facerecognition" target="_blank" class="btn-link"><i class="fab fa-github"></i> GitHub</a>
                     </div>
                 </div>
 
@@ -198,26 +463,216 @@
         </div>
     </section>
 
-    <section id="contact" class="section">
+    <!-- Education & Certifications Section -->
+    <section id="education" class="section bg-glass">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-info">
-                <p>Feel free to reach out for collaborations or opportunities.</p>
-                <br>
-                <p><i class="fas fa-envelope"></i> aslamaadhil99@gmail.com</p>
-                <p><i class="fas fa-phone"></i> +94 71 283 3936</p>
+            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education & Certifications</h2>
+            <div class="section-divider"></div>
+
+            <div class="education-grid">
+                <!-- University Card -->
+                <div class="edu-card main-edu">
+                    <div class="edu-icon"><i class="fas fa-university"></i></div>
+                    <div class="edu-content">
+                        <span class="edu-year">2023 – 2027</span>
+                        <h3>B.Sc. (Hons) in Data Science</h3>
+                        <p class="institution">SLTC Research University (Sri Lanka Technology Campus) — Padukka, Colombo</p>
+                        <div class="gpa-badge"><i class="fas fa-award"></i> GPA: <strong>3.09</strong></div>
+                        <div class="coursework-section">
+                            <h4>Key Coursework:</h4>
+                            <div class="coursework-tags">
+                                <span>Python Programming</span>
+                                <span>Data Structures & Algorithms</span>
+                                <span>Statistics</span>
+                                <span>Linear Algebra</span>
+                                <span>Machine Learning</span>
+                                <span>SQL</span>
+                                <span>Data Visualization</span>
+                                <span>Data Warehousing</span>
+                                <span>Natural Language Processing</span>
+                                <span>Cloud Computing</span>
+                                <span>Cloud Security & Privacy</span>
+                                <span>Big Data</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- High School Card -->
+                <div class="edu-card secondary-edu">
+                    <div class="edu-icon"><i class="fas fa-school"></i></div>
+                    <div class="edu-content">
+                        <span class="edu-year">2021 Batch</span>
+                        <h3>Physical Science Stream</h3>
+                        <p class="institution">Put/President Science College</p>
+                        <p class="details">G.C.E. Advanced Level Examination</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications Section -->
+            <div class="certifications-wrapper">
+                <h3 class="subsection-title"><i class="fas fa-certificate"></i> Professional Certifications & Achievements</h3>
+                <div class="cert-grid">
+                    <div class="cert-item"><i class="fas fa-certificate text-gold"></i> Artificial Intelligence Fundamentals — Mind Luster (2025)</div>
+                    <div class="cert-item"><i class="fas fa-certificate text-gold"></i> R Programming Bootcamp — Udemy (2025)</div>
+                    <div class="cert-item"><i class="fas fa-certificate text-gold"></i> Complete Guide in HTML & CSS — Udemy (2025)</div>
+                    <div class="cert-item"><i class="fas fa-trophy text-gold"></i> Codemania v5.0 Coding Competition — IEEE (2025)</div>
+                    <div class="cert-item"><i class="fas fa-certificate text-gold"></i> NumPy For Data Science — Udemy (2024)</div>
+                    <div class="cert-item"><i class="fas fa-certificate text-gold"></i> Python Programming Bootcamp — Udemy (2024)</div>
+                    <div class="cert-item"><i class="fas fa-certificate text-gold"></i> SQL Mastery — Udemy (2024)</div>
+                    <div class="cert-item"><i class="fas fa-certificate text-gold"></i> Complete C Programming Course — Udemy (2024)</div>
+                    <div class="cert-item"><i class="fas fa-certificate text-gold"></i> Java Fundamentals for Beginners — Udemy (2024)</div>
+                    <div class="cert-item"><i class="fas fa-certificate text-gold"></i> Mastering Version Control (Git/GitHub) — Microsoft (2024)</div>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Reference Section -->
+    <section id="reference" class="section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-user-check"></i> Academic & Professional Reference</h2>
+            <div class="section-divider"></div>
+
+            <div class="reference-card">
+                <div class="ref-avatar">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <div class="ref-details">
+                    <h3>Dr. Chameera De Silva, <span class="degree-tag">PhD (UniMelb)</span></h3>
+                    <p class="ref-role">Head of the Department – Data Science / Lecturer</p>
+                    <p class="ref-subrole"><i class="fas fa-briefcase"></i> FOCIT – Faculty Industry Placement Coordinator</p>
+                    <p class="ref-subrole"><i class="fas fa-shield-alt"></i> Member of Ethics Review Committee | Member of Technical Review Committee</p>
+                    <p class="ref-institution"><i class="fas fa-university"></i> Sri Lanka Technology Campus (SLTC), Padukka, Sri Lanka</p>
+                    
+                    <div class="ref-contacts">
+                        <a href="tel:+94701599764"><i class="fas fa-phone"></i> +94 70 159 9764</a>
+                        <a href="mailto:chameera.d@sltc.ac.lk"><i class="fas fa-envelope"></i> chameera.d@sltc.ac.lk</a>
+                        <a href="mailto:hod.ds@sltc.ac.lk"><i class="fas fa-envelope-open-text"></i> hod.ds@sltc.ac.lk</a>
+                        <a href="mailto:chameeradesilva@acm.org"><i class="fas fa-at"></i> chameeradesilva@acm.org</a>
+                        <a href="http://www.sltc.ac.lk" target="_blank"><i class="fas fa-globe"></i> www.sltc.ac.lk</a>
+                        <a href="http://www.chameeradesilva.com" target="_blank"><i class="fas fa-external-link-alt"></i> Personal Web</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-glass">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-paper-plane"></i> Get In Touch</h2>
+            <div class="section-divider"></div>
+            <p class="section-description">I am actively looking for Data Science, Machine Learning, Data Engineering, and Data Analytics internship opportunities. Feel free to reach out!</p>
+
+            <div class="contact-grid">
+                <!-- Quick Contact Info Cards -->
+                <div class="contact-info-cards">
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-text">
+                            <h4>Email Me</h4>
+                            <a href="mailto:aslamaadhil99@gmail.com">aslamaadhil99@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="contact-text">
+                            <h4>Call Me</h4>
+                            <a href="tel:+94712833936">+94 71 283 3936</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                        <div class="contact-text">
+                            <h4>WhatsApp</h4>
+                            <a href="https://wa.me/94712833936" target="_blank">Chat on WhatsApp</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-text">
+                            <h4>Location</h4>
+                            <p>Padukka, Colombo District, Sri Lanka</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+                        <div class="contact-text">
+                            <h4>LinkedIn</h4>
+                            <a href="https://linkedin.com/in/ahmed-aadhil" target="_blank">linkedin.com/in/ahmed-aadhil</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fab fa-github"></i></div>
+                        <div class="contact-text">
+                            <h4>GitHub</h4>
+                            <a href="https://github.com/AadhilAslam88" target="_blank">github.com/AadhilAslam88</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Glassmorphic Form -->
+                <form class="contact-form" id="contact-form" action="mailto:aslamaadhil99@gmail.com" method="post" enctype="text/plain">
+                    <h3>Send a Direct Message</h3>
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Internship Opportunity / Project Inquiry" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Hi Ahmed, I would like to discuss an opportunity with you..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block"><i class="fas fa-paper-plane"></i> Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2025 Ahmed Aadhil. Built with code.</p>
+        <div class="footer-container">
+            <p>&copy; 2026 <strong>Ahmed Aadhil</strong>. All rights reserved.</p>
+            <p class="footer-sub">B.Sc. (Hons) Data Science Student | Built with passion, code & statistical models.</p>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
-    <a href="https://wa.me/94712833936" class="whatsapp-float" target="_blank">
+    <!-- Interactive Project Modal Popup -->
+    <div id="project-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeProjectModal()">&times;</button>
+            <div id="modal-body-content">
+                <!-- Dynamically populated in script.js -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Floating Action WhatsApp Button -->
+    <a href="https://wa.me/94712833936?text=Hello%20Ahmed,%20I%20saw%20your%20Data%20Science%20portfolio" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" title="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
 </body>
 
 </html>
